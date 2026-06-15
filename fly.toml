@@ -1,0 +1,14 @@
+[app]
+name = "finance-telegram-bot"
+primary_region = "sin"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[processes]
+  worker = "python finance_bot.py"
+
+[[vm]]
+  memory = "256mb"
+  cpu_kind = "shared"
+  cpus = 1
